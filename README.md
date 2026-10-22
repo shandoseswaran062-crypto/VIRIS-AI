@@ -1,19 +1,14 @@
 # VIRIS-AI
 
-This repository now includes a starter backend for the VIRIS-AI project.
+This repository includes a backend starter for the VIRIS-AI project.
 
-## Backend stack
-- Python
-- FastAPI
-- Uvicorn
-
-## Run locally
+## Run the backend from the root directory
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate   # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
 ## API endpoints
@@ -22,7 +17,7 @@ uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 - `GET /api/v1/status` — backend status
 - `POST /api/v1/chat` — sample AI/chat endpoint
 
-## Example
+## Example requests
 
 ```bash
 curl http://localhost:8000/health
@@ -32,4 +27,4 @@ curl -X POST http://localhost:8000/api/v1/chat \
   -d '{"message":"Hello VIRIS-AI"}'
 ```
 
-This is a production-ready starter structure for building your AI backend.
+The backend entry file is placed in the root directory as `main.py`.
